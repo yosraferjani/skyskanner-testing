@@ -1,0 +1,29 @@
+{
+  "name": "skyscanner-testing",
+  "version": "1.0.0",
+  "description": "POC Cypress for the website Skyscanner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": "cypress open",
+    "run": "cypress run"
+  },
+  "author": "Yosra Ferjani",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^11.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": [
+      "cypress/e2e/*.js",
+      "cypress/e2e/steps/*.js",
+      "cypress/e2e/common/*.js"
+    ]
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^14.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "esbuild": "^0.15.15"
+  }
+}
