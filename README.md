@@ -9,6 +9,7 @@ To get started with Skyscanner Testing you will need:
 * [Cypress](https://www.cypress.io//) - V11.2.0 
 * cypress-cucumber-preprocessor
 * Mochawesome 
+* [cypress-xpath](https://github.com/cypress-io/cypress/tree/develop/npm/xpath)
 * NPM
 * Javascript
 * VScode
@@ -33,13 +34,13 @@ To get started with Skyscanner Testing you will need:
 #### Run locally 
 
 ```sh
-npm run open
+npm run cy:open
 ```
 
 #### Run en mode headless
 
 ```sh
-npm run run
+npm run cy:run
 ```
 
 ### Test reports
@@ -54,3 +55,5 @@ to do
 ## Useful Links
 
 * [How to configure cypress beyond version 10 with cucumber ](https://blog.emumba.com/getting-started-with-cypress-10-and-cucumber-6b43ff68633b) 
+
+* [Configure mochaawesome](https://www.npmjs.com/package/cypress-mochawesome-reporter)
