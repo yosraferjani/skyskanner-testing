@@ -11,7 +11,7 @@ class GoogleHome {
         cy.get(googleHome.searchButton)
     }
     static typeText(text) {
-        cy.get(googleHome.searchField).type(text + '{enter}')
+        cy.get(googleHome.searchField).clear().type(text + '{enter}')
     }
 
     static refuseCookies() {

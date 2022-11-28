@@ -15,7 +15,7 @@ return config;
 
 module.exports = defineConfig({
     chromeWebSecurity: false,
-    defaultCommandTimeout: 9000,
+    defaultCommandTimeout: 10000,
     reporter: "mochawesome",
     reporterOptions: {
       "reportDir": "cypress/reports",

@@ -3,9 +3,13 @@ import { Then, When } from "@badeball/cypress-cucumber-preprocessor"
 import SkyscannerHomePage from "../../support/pages/skyscanner-home-page"
 
 When('user fills his flight informations', () => {
-    SkyscannerHomePage.checkDirectFlight()
-    SkyscannerHomePage.checkOneWayFlignt()
-    SkyscannerHomePage.setTravelersNumber()
+    cy.visit('www.skyscanner.fr/')
+    SkyscannerHomePage.acceptCookies()
+    SkyscannerHomePage.checkDirectFlight() 
+    SkyscannerHomePage.checkOneWayFlignt() 
+    SkyscannerHomePage.setTravellersNumber()
+    SkyscannerHomePage.setDeparture()
+    SkyscannerHomePage.setDate()
     SkyscannerHomePage.clickSearchButton()
 })
 

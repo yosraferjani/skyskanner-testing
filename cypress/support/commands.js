@@ -24,9 +24,30 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 // Command to lanch the google browser 
+import skyHome from "./selectors/skyscanner-home-page.selector";
+
 Cypress.Commands.add('lanchGoogle',()=>{
   const URL = Cypress.env("BASE_URL");
     cy.visit(URL)
     cy.url().should("include",URL);
 })
+Cypress.Commands.add('getTravellersDisplayedNumber',()=>{
+  cy.get(skyHome.travelersDropList).then(($span) => {
+   cy.wrap(parseInt(($span.text()).substring(0, 1)))
+})
+})
 
+// return the requiered number of travellers for the flight 
+Cypress.Commands.add('getTravellersRequiredNumber',()=>{
+   cy.fixture("flignt-informations").then((flight) => {
+      cy.wrap(flight.travelersNamber)
+    })
+})
+
+// return the date of the flight
+Cypress.Commands.add('getFlightDate',()=>{
+  cy.fixture("flignt-informations").then((flight) => {
+     cy.wrap(flight.date)
+   })
+})
+ 
