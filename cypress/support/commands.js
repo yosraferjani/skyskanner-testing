@@ -36,18 +36,30 @@ Cypress.Commands.add('getTravellersDisplayedNumber',()=>{
    cy.wrap(parseInt(($span.text()).substring(0, 1)))
 })
 })
-
 // return the requiered number of travellers for the flight 
 Cypress.Commands.add('getTravellersRequiredNumber',()=>{
    cy.fixture("flignt-informations").then((flight) => {
-      cy.wrap(flight.travelersNamber)
+      cy.wrap(flight.travellersNamber)
     })
 })
-
 // return the date of the flight
 Cypress.Commands.add('getFlightDate',()=>{
   cy.fixture("flignt-informations").then((flight) => {
      cy.wrap(flight.date)
    })
 })
- 
+Cypress.Commands.add('getFlightType',()=>{
+  cy.fixture("flignt-informations").then((flight) => {
+     cy.wrap(flight.flightType)
+   })
+})
+Cypress.Commands.add('getFlightDeparture',()=>{
+  cy.fixture("flignt-informations").then((flight) => {
+     cy.wrap(flight.departure)
+   })
+})
+Cypress.Commands.add('getFlightArrival',()=>{
+  cy.fixture("flignt-informations").then((flight) => {
+     cy.wrap(flight.arrival)
+   })
+})

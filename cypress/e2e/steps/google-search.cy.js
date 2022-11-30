@@ -22,5 +22,4 @@ Then('user is redirect to skyscanner', () => {
     SkyscannerHomePage.verifyDepartureField()
     SkyscannerHomePage.verifyArrivalField()
     SkyscannerHomePage.verifySearchFlightButton()
-    SkyscannerHomePage.acceptCookies()
 })

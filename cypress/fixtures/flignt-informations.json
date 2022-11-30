@@ -2,5 +2,6 @@
 "departure": "ORY",
 "arrival":"TNG",
 "date": "25/11/2023",
-"travellersNamber": 1
+"travellersNamber": 5,
+"flightType": "Direct"
 }

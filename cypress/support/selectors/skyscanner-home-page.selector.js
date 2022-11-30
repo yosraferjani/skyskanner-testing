@@ -12,7 +12,8 @@ module.exports = {
     returnDateField: "#return-fsc-datepicker-button",
     travelersDropList: "#CabinClassTravellersSelector_fsc-class-travellers-trigger__OTYyM",
     travelerCountField:"search-controls-adults-nudger",
-    countButton:'//button[@title="Augmenter le nombre d\'adultes"]',
-    calenderInput:'#fdepart-calendar__bpk_calendar_nav_select'
+    increaseButton:'//button[@title="Augmenter le nombre d\'adultes"]',
+    decreaseButton:'//button[@title="Diminuer le nombre d\'adultes"]',
+    calenderInput:'#depart-calendar__bpk_calendar_nav_select'
 }
 
