@@ -1,4 +1,4 @@
-Feature: Search for a flight on the website Skyskanner
+Feature: Search a flight on the website Skyskanner
 
   Scenario: Search skyscanner
     Given user is on the "Google" website

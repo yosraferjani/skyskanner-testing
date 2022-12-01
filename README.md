@@ -61,8 +61,11 @@ to do
 
 * [How to configure cypress beyond version 10 with cucumber ](https://blog.emumba.com/getting-started-with-cypress-10-and-cucumber-6b43ff68633b) 
 
-* [Configure mochaawesome](https://www.npmjs.com/package/cypress-mochawesome-reporter)
-(https://kristijan-pajtasev.medium.com/cypress-merging-multiple-mochawesome-reports-3eb8fcaaf32c)
-(https://dzone.com/articles/cypress-generate-html-results-with-screenshot)
+* Configure mochaawesome
+[https://www.npmjs.com/package/cypress-mochawesome-reporter]
+[https://kristijan-pajtasev.medium.com/cypress-merging-multiple-mochawesome-reports-3eb8fcaaf32c]
+[https://dzone.com/articles/cypress-generate-html-results-with-screenshot]
 
-* [Run cypress tests in jenkins pipeline](https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial/)
+* Run cypress tests in jenkins pipeline
+ [https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial/]
+ [https://www.youtube.com/watch?v=RhBRFyLqxz0]
