@@ -35,6 +35,7 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^14.0.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
-    "esbuild": "^0.15.15"
+    "esbuild": "^0.15.15",
+    "groovy": "^0.0.1"
   }
 }
