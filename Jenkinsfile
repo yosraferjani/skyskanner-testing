@@ -47,9 +47,9 @@ pipeline {
         
         stage('Testing') {
             steps {
-                sh "npm i -g corepack" // Change sh by bat in case of Jenkins installed on Windows
-                sh "yarn install" // Change sh by bat in case of Jenkins installed on Windows
-                sh "yarn test --browser ${BROWSER} --spec ${SPEC} --env ENV=${ENV}" // Change sh by bat in case of Jenkins installed on Windows
+                bat "npm i -g corepack" // Change sh by bat in case of Jenkins installed on Windows
+                bat "yarn install" // Change sh by bat in case of Jenkins installed on Windows
+                bat "yarn test --browser ${BROWSER} --spec ${SPEC} --env ENV=${ENV}" // Change sh by bat in case of Jenkins installed on Windows
             }
         }
         
