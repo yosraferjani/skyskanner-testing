@@ -2,10 +2,6 @@ import flight from "../../fixtures/flignt-informations.json";
 import website from "../../fixtures/skyskanner.json";
 import skyHome from "../selectors/skyscanner-home-page.selector";
 import DateUtils from "./date-utils";
-Cypress.on('uncaught:exception', (err, runnable) => {
-  return false;
-});
-
 class SkyscannerHomePage {
   static verifySkyscannerHomePage() {
     cy.fixture("skyskanner").then((website) => {
@@ -51,12 +47,11 @@ class SkyscannerHomePage {
   }
   static setDate() {
     this.clickCalendar()
-    cy.getFlightDate().then((date) => {
-      var day = DateUtils.getDay(date)
-      var month = DateUtils.getMonth(date)
+    cy.fixture("flignt-informations").then((flight) => {
+      var day = DateUtils.getDay(flight.date)
+      var month = DateUtils.getMonth(flight.date)
       var fullDate = day + ' ' + month
       cy.get(skyHome.calenderInput).select(month)
-      cy.get('button[aria-label*="' + fullDate + '"]').click()
     })
   }
   static setDeparture() {
@@ -70,21 +65,23 @@ class SkyscannerHomePage {
     })
   }
   static setNumber(requiredNumber) {
-    cy.getTravellersDisplayedNumber().then(displayNumber => {
+    cy.get(skyHome.travelersDropList).then(($span) => {
+      let displayNumber = parseInt(($span.text()).substring(0, 1))
       if (displayNumber < requiredNumber) {
-       cy.xpath(skyHome.increaseButton).first().click()
+        cy.xpath(skyHome.increaseButton).first().click({ force: true })
         this.setNumber(requiredNumber)
       }
       if (displayNumber > requiredNumber) {
-      cy.xpath( decreaseButton).first().click()
+        cy.xpath(skyHome.decreaseButton).first().click({ force: true })
         this.setNumber(requiredNumber)
       }
     })
   }
   static setTravellersNumber() {
     cy.get(skyHome.travelersDropList).click()
-    cy.getTravellersRequiredNumber().then(value => {
-      this.setNumber(value)
+    cy.fixture("flignt-informations").then((flight) => {
+      this.setNumber(flight.travellersNamber)
+      cy.get(skyHome.setButton).click()
     })
   }
 }

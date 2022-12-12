@@ -1,4 +1,6 @@
 {
-    "BASE_URL":"https://www.google.fr"
+    "BASE_URL": "https://www.google.fr",
+    "env": {
+        "environment": "production"
+    }
 }
-  

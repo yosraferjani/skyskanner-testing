@@ -12,3 +12,4 @@ Feature: Search a flight on the website Skyskanner
   Scenario: Search flight
     When user fills his flight informations
     Then all displayed flights are direct flights and form "ORY" to "TNG"
+  

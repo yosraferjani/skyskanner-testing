@@ -8,7 +8,8 @@
     "cy:open": "cypress open LANG=fr",
     "cy:run": "cypress run LANG=fr",
     "cy:chrome": "cypress run --browser chrome LANG=fr",
-    "cy:firefox": "cypress run --browser firefox  LANG=fr"
+    "cy:firefox": "cypress run --browser firefox  LANG=fr",
+    "cy:run:prod": "cypress run --env configFile=production"
   },
   "author": "Yosra Ferjani",
   "license": "ISC",
